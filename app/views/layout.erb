@@ -9,10 +9,10 @@
 
                 <a href="/projects">Projects Track Homepage</a>
                     <ul>
-                        <li><a href="/projects/projects">All Projects</a></li>
-                        <li><a href="/users/<%= current_user.id %>">My Projects</a></li>
+                        <li><a href="/projects">All Projects</a></li>
+                        <li><a href="/users/<%= current_user.slug %>">My Projects</a></li>
                         <li><a href="/projects/new">Create New Project</a></li>
-                        <li><a href="/logout">Logout</a></li>
+                        <li><a href="/">Logout</a></li>
                     </ul>
     <%end %>
 

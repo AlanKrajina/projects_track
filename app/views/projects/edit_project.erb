@@ -2,8 +2,8 @@
 
 <form method="post" action="/projects/<%=@project.id%>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <input type="text" name="content" value="<%= @project.name %>">
+  <input type="text" name="name" value="<%= @project.name %>">
   <input type="text" name="content" value="<%= @project.content %>">
-  <input type="text" name="content" value="<%= @project.completion %>">
+  <input type="text" name="completion" value="<%= @project.completion %>">
   <input type="submit" value="submit">
 </form>

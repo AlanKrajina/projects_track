@@ -1,11 +1,15 @@
-<p><%= @project.name %>
-<p><%= @project.content %>
-<p><%= @project.completion %>
+<p><%= @project.name %></p>
+<br>
+<p><%= @project.content %></p>
+<br>
+<p><%= @project.completion %></p>
+<br>
+
 
 
 <form method="post" action="/projects/<%=@project.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete Tweet">
+  <input type="submit" value="Delete Project">
 </form>
 
-<a href="/projects/<%=@project.id%>/edit">Edit Tweet </a>
+<a href="/projects/<%=@project.id%>/edit">Edit Project </a>

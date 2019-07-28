@@ -1,5 +1,15 @@
 class UsersController < ApplicationController
   
+  get '/users/:slug' do
+    @user = User.find_by_slug(params[:slug])
+    if @user.id == current_user.id
+    erb :'users/show'
+      else
+         redirect to '/'
+      end 
+  end
+  
+  
   get '/signup' do
       if !logged_in?
           erb :'/users/create_user'

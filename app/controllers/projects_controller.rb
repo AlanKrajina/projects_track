@@ -25,8 +25,6 @@ class ProjectsController < ApplicationController
       else
         @project = current_user.projects.build(name: params[:name], content: params[:content], completion: params[:completion])
         current_user.scores << Score.find_or_create_by(:grade => params[:grade])
- #     binding.pry
-
         if @project.save
           redirect to "/projects/#{@project.id}"
         else

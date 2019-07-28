@@ -7,11 +7,11 @@
 
     <% if logged_in? %>
 
-                <a href="/tweets">Projects Track</a>
+                <a href="/projects">Projects Track Homepage</a>
                     <ul>
-                        <li><a href="/tweets/tweets">All Tweets</a></li>
-                        <li><a href="/users/<%= current_user.id %>">My Tweets</a></li>
-                        <li><a href="/tweets/new">Create New Tweet</a></li>
+                        <li><a href="/projects/projects">All Projects</a></li>
+                        <li><a href="/users/<%= current_user.id %>">My Projects</a></li>
+                        <li><a href="/projects/new">Create New Project</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
     <%end %>

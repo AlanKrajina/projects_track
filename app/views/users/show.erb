@@ -32,23 +32,3 @@
 
 <% end %>
 
-
-<% if !current_user.scores.empty? %>
-
-<p> Your score from current and past projects:</p>
-
-  <% current_user.scores.each_with_index do |score,index| %>
-
-    <p><%= "Project #{index+1}. => #{score.grade}" %></p>
-  <% end %>
-
-  <form method="post" action="/scores/delete">
-    <input id="hidden" type="hidden" name="_method" value="DELETE">
-    <input type="submit" class="button" value="Clear score">
-  </form>
-  
-  
-<% else %>
-    <h2> Currently there is no score available.</h2>
-
-<% end %>  

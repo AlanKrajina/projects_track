@@ -5,15 +5,6 @@
 <p><%= @project.completion %></p>
 <br>
 
-<% current_user.scores.each do |score| %>
-    <% break score if score !=  %>
-
-    <p><%= score.grade %></p>
-    
-  
-  <% end %>
-
-
 
 
 <form method="post" action="/projects/<%=@project.id%>/delete">

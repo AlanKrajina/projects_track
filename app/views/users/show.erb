@@ -1,11 +1,13 @@
-<p> Here are your projects, <%= @user.username %>
+<p> Here are your projects, <%= @user.username %></p>
+<br>
+
 
 <% if !@user.projects.empty? %>
 
 
   <% @user.projects.each do |project| %>
     <div>
-      <%= project.name %>
+      <h2><%= project.name %></h2>
       <br>
       <%= project.content %>
       <br>
@@ -30,3 +32,16 @@
 
 <% end %>
 
+
+
+<p> and your score from current and past projects</p>
+
+  <% current_user.scores.each_with_index do |score,index| %>
+
+    <p><%= "Project #{index+1}. => #{score.grade}" %></p>
+  <% end %>
+
+  <form method="post" action="/scores/delete">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    <input type="submit" class="button" value="Remove grades">
+  </form>

@@ -23,6 +23,8 @@ class UsersController < ApplicationController
       redirect to '/signup'
     else
       @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
+      
+     # @user.scores << Score.find_or_create_by(:grade => params[:grade])
       @user.save
       session[:user_id] = @user.id
       redirect to '/projects'

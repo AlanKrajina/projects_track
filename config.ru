@@ -7,6 +7,5 @@ end
 
 use Rack::MethodOverride
 use UsersController
-use ScoresController
 use ProjectsController
 run ApplicationController

@@ -7,3 +7,13 @@
 
   <input type="submit" value="submit">
 </form>
+
+
+
+
+  <% Result.all.each do |result| %>
+    <input type="radio" name="pet[owner_id]" id="<%= owner.id %>" value="<%= owner.id %>">
+    
+    <%= result.content %>
+    </input><br>
+  <% end %>

@@ -1,16 +1,16 @@
 <p>Welcome,</p> 
 <h1><em><%= current_user.username %></em></h1>
 <br><br>
-<p>List of all Projects:</p>
-<br>
+<p>Here is a list of all Projects:</p>
 <% @projects.each do |project| %>
     <h2><%= project.name %></h2>
     <p><%= project.content %></p>
-    <p><%= project.completion %></p>
+    <p><em>Completion date:</em></p>
+    <p>*<%= project.completion %></p>
       
       <% project.results.each do |pro| %>
-
-      <p><%= pro.info %></p>
+      <p><em>Number of attempts needed to complete:</em></p>
+      <p>*<%= pro.info %></p>
       <% end %>
       
     <hr>

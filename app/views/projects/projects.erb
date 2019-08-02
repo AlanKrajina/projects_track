@@ -6,6 +6,11 @@
     <h3><%= project.name %></h3>
     <h3><%= project.content %></h3>
     <h3><%= project.completion %></h3>
-    <h3><%= project.results %></h3>
+      
+      <% project.results.each do |pro| %>
+
+      <p><%= pro.info %></p>
+      <% end %>
+      
     <hr>
 <% end %>

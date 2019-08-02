@@ -12,6 +12,12 @@
       <%= project.content %>
       <br>
       <%= project.completion %>
+      <br>
+      
+      <% project.results.each do |pro| %>
+
+      <p><%= pro.info %></p>
+      <% end %>
 
       <br><br>
 

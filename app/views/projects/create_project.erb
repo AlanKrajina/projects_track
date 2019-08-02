@@ -11,6 +11,7 @@
 
 
   <% Result.all.each do |result| %>
+
     <input type="radio" name="result" id="<%= result.id %>" value="<%= result.info %>">
     
     <%= result.info %>

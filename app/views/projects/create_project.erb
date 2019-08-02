@@ -9,11 +9,12 @@
 
 
 <h2>Create a new project:</h2>
+<br>
 <form action="/projects" method="POST">
-  <p>Project name: <input type="text" name="name"></p>
+  <p>Project name: <input type="text" name="name" style="width:210px"></p>
   <p>Content:</p>
-  <textarea name="content" id="content" cols="35" rows="5"></textarea>
-  <p>Completion date: <input type="text" name="completion"></p>
+  <textarea name="content" id="content" cols="40" rows="5"></textarea>
+  <p>Completion date: <input type="text" name="completion" style="width:190px"></p>
   
   <p>Attempts needed to complete:</p>
   <% Result.all.each do |result| %>

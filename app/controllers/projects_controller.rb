@@ -12,6 +12,8 @@ class ProjectsController < ApplicationController
   
   get '/projects/new' do
     if logged_in?
+      @message = session.delete(:message)
+
       erb :'projects/create_project'
     else
       redirect to '/login'
@@ -21,6 +23,13 @@ class ProjectsController < ApplicationController
   post '/projects' do
     if logged_in?
       if params[:name] == "" || params[:content] == "" || params[:completion] == ""
+        
+        
+        
+        session[:message] = "Please fill out all of the fields."
+
+
+
         redirect to "/projects/new"
       else
         @project = current_user.projects.build(name: params[:name], content: params[:content], completion: params[:completion])
@@ -62,6 +71,9 @@ class ProjectsController < ApplicationController
     if logged_in?
       @project = Project.find_by_id(params[:id])
       if @project && @project.user == current_user
+             
+              @message = session.delete(:message)
+
         erb :'projects/edit_project'
       else
         redirect to '/projects'
@@ -74,6 +86,12 @@ class ProjectsController < ApplicationController
   patch '/projects/:id' do
     if logged_in?
       if params[:name] == "" || params[:content] == "" || params[:completion] == ""
+        
+        
+        session[:message] = "Please fill out all of the fields."
+
+
+
         redirect to "/projects/#{params[:id]}/edit"
       else
         @project = Project.find_by_id(params[:id])

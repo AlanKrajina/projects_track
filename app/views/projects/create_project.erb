@@ -5,15 +5,20 @@
   <p>Completion: <input type="text" name="completion"></p>
   
 
-  <input type="submit" value="submit">
-</form>
+
 
 
 
 
   <% Result.all.each do |result| %>
-    <input type="radio" name="pet[owner_id]" id="<%= owner.id %>" value="<%= owner.id %>">
+    <input type="radio" name="result" id="<%= result.id %>" value="<%= result.info %>">
     
-    <%= result.content %>
+    <%= result.info %>
     </input><br>
   <% end %>
+  
+  
+  
+  <input type="submit" value="submit">
+</form>  
+  

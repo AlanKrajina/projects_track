@@ -24,6 +24,9 @@ class ProjectsController < ApplicationController
         redirect to "/projects/new"
       else
         @project = current_user.projects.build(name: params[:name], content: params[:content], completion: params[:completion])
+  #      binding.pry
+        @project.results << Result.find_or_create_by(params[:result])
+
         if @project.save
           redirect to "/projects/#{@project.id}"
         else

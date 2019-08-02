@@ -1,11 +1,12 @@
-<h1>Welcome, <%= current_user.username %></h1>
+<p>Welcome,</p> 
+<h1><em><%= current_user.username %></em></h1>
 <br><br>
-<h2>These are all the Projects:</h2>
+<p>List of all Projects:</p>
 <br>
 <% @projects.each do |project| %>
-    <h3><%= project.name %></h3>
-    <h3><%= project.content %></h3>
-    <h3><%= project.completion %></h3>
+    <h2><%= project.name %></h2>
+    <p><%= project.content %></p>
+    <p><%= project.completion %></p>
       
       <% project.results.each do |pro| %>
 

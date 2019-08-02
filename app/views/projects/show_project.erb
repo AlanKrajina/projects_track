@@ -13,11 +13,12 @@
 
 <br>
 
+<a href="/projects/<%=@project.id%>/edit" class="button">Edit Project </a>
+<br><br>
 
 <form method="post" action="/projects/<%=@project.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
-  <input type="submit" class="button" value="Delete Project">
+  <input type="submit" class="button, submit" value="Delete Project">
 </form>
 <br>
 
-<a href="/projects/<%=@project.id%>/edit" class="button">Edit Project </a>

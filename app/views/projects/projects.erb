@@ -1,8 +1,10 @@
 <p>Welcome, <em><strong><%= current_user.username %></em></strong>.</p>
-<br><br>
+<br>
 <p>Here is a list of all Projects:</p>
+<br>
+
 <% @projects.each do |project| %>
-    <h2><%= project.name %></h2>
+    <h2 style="color:#008B8B" ><%= project.name %></h2>
     <p><%= project.content %></p>
     <p><em>Completion date:</em></p>
     <p>*<%= project.completion %></p>

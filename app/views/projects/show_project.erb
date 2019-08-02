@@ -1,17 +1,19 @@
-<p><%= @project.name %></p>
+<h2><%= @project.name %></h2>
 <br>
 <p><%= @project.content %></p>
 <br>
-<p><%= @project.completion %></p>
+<p><em>Completion date:</em></p>
+<p>*<%= @project.completion %></p>
 <br>
 
-
+<p><em>Number of attempts needed to complete:</em></p>
 <% @project.results.each do |project| %>
 
-    <p><%= project.info %></p>
+    <p>*<%= project.info %></p>
 <% end %>
 
-<br>
+<br><br>
+
 
 <a href="/projects/<%=@project.id%>/edit" class="button">Edit Project </a>
 <br><br>

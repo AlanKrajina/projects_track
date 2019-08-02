@@ -11,12 +11,12 @@
       <br>
       <%= project.content %>
       <br><br>
-      <%= project.completion %>
+      <p><em>Completion date:</em></p>
+      <p>*<%= project.completion %></p>
       <br>
-      
+      <p><em>Number of attempts needed to complete:</em></p>
       <% project.results.each do |pro| %>
-
-      <p><%= pro.info %></p>
+      <p>*<%= pro.info %></p>
       <% end %>
 
       <br><br>

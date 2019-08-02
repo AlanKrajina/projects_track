@@ -8,12 +8,10 @@
 
 <p><em>Number of attempts needed to complete:</em></p>
 <% @project.results.each do |project| %>
-
     <p>*<%= project.info %></p>
 <% end %>
 
 <br><br>
-
 
 <a href="/projects/<%=@project.id%>/edit" class="button">Edit Project </a>
 <br><br>

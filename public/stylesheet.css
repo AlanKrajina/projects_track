@@ -28,6 +28,10 @@
   -webkit-text-fill-color: transparent;
 }
 
+.alert {
+  color: red;
+}
+
  body {
     overflow-x: hidden;
  }

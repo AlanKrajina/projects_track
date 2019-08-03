@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
   
   post '/projects' do
     if logged_in?
-      if params[:name] == "" || params[:content] == "" || params[:completion] == ""
+      if params[:name] == "" || params[:content] == "" || params[:completion] == "" || params[:result] == ""
         
         
         
@@ -85,7 +85,7 @@ class ProjectsController < ApplicationController
 
   patch '/projects/:id' do
     if logged_in?
-      if params[:name] == "" || params[:content] == "" || params[:completion] == ""
+      if params[:name] == "" || params[:content] == "" || params[:completion] == "" || params[:result] == ""
         
         
         session[:message] = "Please fill out all of the fields."

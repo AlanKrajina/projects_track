@@ -7,7 +7,6 @@
 
 <h2> Edit Project: </h2>
 <br>
-
 <form method="post" action="/projects/<%=@project.id%>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
   <p>Project name: <input type="text" name="name" value="<%= @project.name %>" style="width:210px"></p>

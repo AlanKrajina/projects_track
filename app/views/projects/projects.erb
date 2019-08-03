@@ -1,5 +1,7 @@
 <p>Welcome, <em><strong><%= current_user.username %></em></strong>.</p>
 <br>
+<% if !@projects.empty? %>
+
 <p>Here is a list of all Projects:</p>
 <br>
 
@@ -15,4 +17,10 @@
       <% end %>
       
     <hr>
+<% end %>
+
+
+<% else %>
+    <h2> There are no projects available.</h2>
+
 <% end %>

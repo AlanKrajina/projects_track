@@ -17,6 +17,8 @@ And then execute:
 After:
 
     $ bundle install
+    $ rake db:migrate
+    $ rake db:seed
     $ shotgun
 
 ## Requirements

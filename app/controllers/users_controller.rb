@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       redirect to '/signup'
       
     elsif User.all.any?{|user|user.email.downcase == params["email"].downcase||user.username.downcase == params["username"].downcase} 
-      redirect to '/signup
+      redirect to '/signup'
 
     else
       @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])

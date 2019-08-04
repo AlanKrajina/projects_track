@@ -35,6 +35,7 @@ After:
 - BONUS: Display validation failures to user with error messages.
 
 -> Blog explaining the way requirements are met: https://alankrajina.github.io/projects_track_app
+
 -> Short video demo with narration describing how a user would interact with application: https://youtu.be/RmwHHkkomrU
 
 ## Usage

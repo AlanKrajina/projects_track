@@ -31,7 +31,7 @@ After:
 - Ensure that users can edit and delete only their own resources - not resources created by other users.
 - Validate user input so bad data cannot be persisted to the database.
 - BONUS: Display validation failures to user with error messages.
-
+-> Blog explaining the way requirements are met: https://alankrajina.github.io/projects_track_app
 ## Usage
 
 After running shotgun in terminal there will be a message like -> Your server is running at 165.227.145.70:38134. 

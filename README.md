@@ -1,6 +1,6 @@
 # Projects_Track
 
-Projects_Tracks CLI is a CRUD, MVC app that uses Sinatra. The app allows a user to signup or login to their account. User will have the ability to Create a project, Read the info, Update and Delete. User will have his own space to check only his projects and to edit them. On the app homepage all users can see all of the projects created. A user can only update and delete his own projects.
+Projects_Tracks is an app that allows a user to signup and create a new account or login to their existing account. User will have the ability to Create a project, Read the info, Update and Delete. User will have his own space to check only his projects and to edit them. On the app homepage all users can see all of the projects created. A user can only update and delete his own projects.
 
 ## Installation
 

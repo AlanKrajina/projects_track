@@ -1,12 +1,9 @@
 class ProjectsController < ApplicationController
   
   get '/projects' do
-    if logged_in?
+    authenticate
       @projects = Project.all
       erb :'projects/projects'
-    else
-      redirect to '/login'
-    end
   end  
   
   get '/projects/new' do
@@ -20,7 +17,7 @@ class ProjectsController < ApplicationController
   end
   
   post '/projects' do
-    if logged_in?
+    authenticate
       if params[:name] == "" || params[:content] == "" || params[:completion] == "" || params[:result] == ""
         
         session[:message] = "Please fill out all of the fields."
@@ -35,9 +32,6 @@ class ProjectsController < ApplicationController
         else
           redirect to "/projects/new"
         end
-      end
-    else
-      redirect to '/login'
     end
   end
   
